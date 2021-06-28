@@ -1,0 +1,13 @@
+.home__image {
+    width: 100%;
+    z-index: -1;
+    /* mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
+    min-height: 20rem;
+    margin-bottom: -12rem;
+}
+
+.home__row {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
