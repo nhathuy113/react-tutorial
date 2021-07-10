@@ -38,6 +38,7 @@
 
 .header__navigation {
     display: flex;
+    align-items: center;
 }
 
 .header__navigation .header__option {

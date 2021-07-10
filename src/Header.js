@@ -13,14 +13,18 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Search, ShoppingCart } from '@material-ui/icons';
 
 import './Header.css';
+import { Link } from 'react-router-dom';
 
 function Header() {
     return (
         <div className='header'>
-          <img 
-              className='header__logo'
-              src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
-          />
+          <Link to='/'>
+            <img 
+                className='header__logo'
+                src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
+            />
+          </Link>
+         
 
           <search className='header__search'>
             <input className='header__searchInput' type='text' />
@@ -43,10 +47,13 @@ function Header() {
               <span className='header__option_line2'>Prime</span>
             </optn>
 
-            <optn className='header__optionBasket'>
-              <ShoppingCartIcon />
-              <span className='header__option_line2'>0</span>
-            </optn>
+            <Link to='/checkout'>
+              <optn className='header__optionBasket'>
+                <ShoppingCartIcon />
+                <span className='header__option_line2'>0</span>
+              </optn>
+            </Link>
+            
           </navigation>
       </div>
     )

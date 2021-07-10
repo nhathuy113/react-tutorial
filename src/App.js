@@ -7,33 +7,32 @@ import './App.css';
 import Header from './Header';
 import Home from './Home';
 
+import Checkout from './Checkout/Checkout';
+
 function App() {
     return (
-        <Router>
-            <app className="App">
+        <app className="App">
+            <Router>
+                {/* menu bar */}
+                <Header/>
+
+                {/* content page */}
                 <Switch>
                     {/* checkout page ↓ */}
                     <Route path='/checkout'>
-                        {/* menu bar */}
-                        <Header/>
-                        <div>
-                            <p>give me 1000$</p>
-                        </div>
+                        <Checkout/>
                     </Route>
                     {/* checkout page ↑ */}
 
                     {/* default target ↓ */}
                     <Route path='/'>
-                        {/* menu bar */}
-                        <Header/>
                         {/* home page */}
                         <Home/>
                     </Route>
                     {/* default target　↑ */}
                 </Switch>
-                
-            </app>
-        </Router>
+            </Router>
+        </app>
     );
 }
 
