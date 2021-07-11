@@ -3,6 +3,10 @@ import React from 'react'
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
+// link has been declared??!
+// import { Link } from "react-router-dom";
+import { useStateValue } from "./StateProvider";
+
 // Option 1:
 // import XIcon from '@material-ui/icons/X';
 
@@ -16,6 +20,8 @@ import './Header.css';
 import { Link } from 'react-router-dom';
 
 function Header() {
+    const [{ basket, user }, dispatch] = useStateValue();
+
     return (
         <div className='header'>
           <Link to='/'>
@@ -50,7 +56,8 @@ function Header() {
             <Link to='/checkout'>
               <optn className='header__optionBasket'>
                 <ShoppingCartIcon />
-                <span className='header__option_line2'>0</span>
+                {/* <span className='header__option_line2'>0</span> */}
+                <span className='header__option_line2'>{basket?.length}</span>
               </optn>
             </Link>
             
